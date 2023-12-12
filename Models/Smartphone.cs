@@ -2,8 +2,27 @@ namespace DesafioPOO.Models
 {
     public abstract class Smartphone
     {
-        public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        private string _numero;
+        public string Numero
+        {
+            get
+            {
+                return _numero;
+            }
+            set
+            {
+                if (value == "")
+                {
+                    throw new ArgumentException("O numero nao pode ser vazio");
+                }
+            }
+        }
+
+        private string Modelo { get; }
+
+        private string IMEI { get; }
+
+        private int Memoria { get; }
 
         public Smartphone(string numero)
         {
