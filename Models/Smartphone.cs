@@ -3,34 +3,21 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         private string _numero;
-        public string Numero
-        {
-            get
-            {
-                return _numero;
-            }
-            set
-            {
-                if (value == "")
-                {
-                    throw new ArgumentException("O numero nao pode ser vazio");
-                }
-            }
-        }
+        public string Numero { get; set; }
 
         public Smartphone(string numero)
         {
             Numero = numero;
         }
 
-        public void Ligar()
+        public void Ligar(string telefone)
         {
-            Console.WriteLine("Ligando...");
+            Console.WriteLine($"Ligando para o número: {telefone}");
         }
 
-        public void ReceberLigacao()
+        public void ReceberLigacao(string telefone)
         {
-            Console.WriteLine("Recebendo ligação...");
+            Console.WriteLine($"Recebendo ligação de {telefone}");
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
