@@ -18,16 +18,9 @@ namespace DesafioPOO.Models
             }
         }
 
-        private string Modelo { get; }
-
-        private string IMEI { get; }
-
-        private int Memoria { get; }
-
         public Smartphone(string numero)
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
         }
 
         public void Ligar()
